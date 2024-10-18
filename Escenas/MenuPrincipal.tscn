@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dga6y3itkr47m"]
+
+[ext_resource type="Script" path="res://scripts/MenuPrincipal.cs" id="1_wyt00"]
+[ext_resource type="Script" path="res://scripts/BtnJugar.cs" id="2_dju6f"]
+[ext_resource type="Script" path="res://scripts/BtnSalir.cs" id="3_51lvc"]
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wyt00")
+
+[node name="BotonesCentrados" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContenedorBotones" type="VBoxContainer" parent="BotonesCentrados"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="BtnJugar" type="Button" parent="BotonesCentrados/ContenedorBotones"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+script = ExtResource("2_dju6f")
+
+[node name="BtnSalir" type="Button" parent="BotonesCentrados/ContenedorBotones"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+script = ExtResource("3_51lvc")

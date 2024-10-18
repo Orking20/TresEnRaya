@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="TresEnRaya"
+config/features=PackedStringArray("4.2", "C#", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+width=1280
+"#ResoluciÃ³npordefectoenanchoheight"=720
+"#ResoluciÃ³npordefectoenaltostretch_mode"=2
+#0:mantener,1:escala,2:escalaconaspectostretch_aspect=1
+
+[dotnet]
+
+project/assembly_name="TresEnRaya"
+
+[rendering]
+
+renderer/rendering_method="mobile"
