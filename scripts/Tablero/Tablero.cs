@@ -47,6 +47,45 @@ public partial class Tablero : Control
 		{
 			casilla.Icon = this.fichaX;
 			casilla.Disabled = true;
+			this.turnoJugador = false;
+			TurnoMaquina();
+		}
+		else
+		{
+			casilla.Icon = this.fichaO;
+			casilla.Disabled = true;
+			this.turnoJugador = true;
+		}
+	}
+
+	private void TurnoMaquina()
+	{
+		bool fichaMarcada = false;
+		bool hayEspacio = false;
+		var fila = new Random().Next(0, 3);
+		var columna = new Random().Next(0, 3);
+
+		foreach (var casilla in this.casillas)
+		{
+			if (!casilla.Disabled)
+			{
+				hayEspacio = true;
+			}
+		}
+
+		while (!fichaMarcada && hayEspacio)
+		{
+			if (this.casillas[fila, columna].Disabled == false)
+			{
+				this.casillas[fila, columna].EmitSignal(Button.SignalName.Pressed);
+				this.casillas[fila, columna]._Pressed();
+				fichaMarcada = true;
+			}
+			else
+			{
+				fila = new Random().Next(0, 3);
+				columna = new Random().Next(0, 3);
+			}
 		}
 	}
 }
