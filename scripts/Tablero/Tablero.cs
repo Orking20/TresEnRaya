@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 public partial class Tablero : Control
 {
 	private Button[,] casillas; 
+	private Button reiniciar;
 	private bool turnoJugador;
 	private Texture2D fichaX;
 	private Texture2D fichaO;
@@ -17,6 +18,9 @@ public partial class Tablero : Control
 		this.fichaX = (Texture2D)GD.Load("res://Sprites/Cruz.png");
 		this.fichaO = (Texture2D)GD.Load("res://Sprites/Circulo.png");
 		this.finPartida = false;
+
+		this.reiniciar = GetNode<Button>("Reiniciar");
+		this.reiniciar.Pressed += OnBotonReiniciarPressed;
 
 		this.casillas[0, 0] = GetNode<Button>("ContenedorCasillas/Casilla1");
 		this.casillas[0, 1] = GetNode<Button>("ContenedorCasillas/Casilla2");
@@ -241,5 +245,10 @@ public partial class Tablero : Control
 				return true;
 		}
 		return false;
+	}
+
+	private void OnBotonReiniciarPressed()
+	{
+		GetTree().ReloadCurrentScene();
 	}
 }

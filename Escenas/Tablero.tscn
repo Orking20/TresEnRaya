@@ -65,3 +65,11 @@ offset_left = -640.0
 offset_top = -359.0
 offset_right = 639.0
 offset_bottom = 295.0
+
+[node name="Reiniciar" type="Button" parent="."]
+layout_mode = 0
+offset_left = -118.0
+offset_top = 301.0
+offset_right = 128.0
+offset_bottom = 345.0
+text = "Reiniciar"

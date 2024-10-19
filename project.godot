@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="TresEnRaya"
+config/name="Tres en raya"
 run/main_scene="res://Escenas/MenuPrincipal.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/Tablero.png"
 
 [display]
 
