@@ -58,3 +58,10 @@ layout_mode = 2
 
 [node name="Casilla9" type="Button" parent="ContenedorCasillas"]
 layout_mode = 2
+
+[node name="Ganador" type="Label" parent="."]
+layout_mode = 1
+offset_left = -640.0
+offset_top = -359.0
+offset_right = 639.0
+offset_bottom = 295.0
